@@ -2,10 +2,10 @@ require "yaml" # require modules here
 
 def load_library(path)
   emoticons = YAML.load_file(path) 
-  emoticons = Hash.new
-  emoticons["get_emoticon"] = Hash.new
-  emoticons["get_meaning"] = Hash.new
-  emoticons.each do|k, v|
+  emoticon_hash = Hash.new
+  emoticon_hash["get_emoticon"] = Hash.new
+  emoticon_hash["get_meaning"] = Hash.new
+  emoticon_hash.each do|k, v|
   emoticons["get_meaning"] = japanese_emoticon
    emoticons["get_emoticon"] = english_emoticon
   end
